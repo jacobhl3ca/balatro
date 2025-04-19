@@ -12,18 +12,18 @@ def automate_clicks():
     os.system("osascript -e 'tell application \"System Events\" to key code 48 using {command down}'")
     time.sleep(0.5)  # Small delay to ensure the app switch completes
 
-# URL has to be open in browser
-# https://mail.google.com/mail/u/0/#search/from%3Ajacobhl3CA%40gmail.com+OR+jacob.heifetz-licht%40keplergrp.com+to%3Ame+in%3Ainbox 
-
     # Press the escape key
     pyautogui.press('escape')
     
     # Coordinates to click
     positions = [
-        # from main menu
-        # (477, 689) #comment/uncomment
-        # if already on challenge screen
-        (746, 340),  #comment/uncomment
+        
+    # Only have 1 of these uncommented:
+        # 1. from main menu: (likely have to fix!)
+        # (477, 689),
+        # 2. after losing a challenge (this script's main purpose, hard challenges)
+        (746, 340),
+
         (805, 202),
         (706, 415),
         (512, 585),
@@ -38,4 +38,4 @@ def automate_clicks():
         time.sleep(0.2)  # Small delay to ensure stability
 
 # Run the automation
-automate_clicks()
+# automate_clicks()
