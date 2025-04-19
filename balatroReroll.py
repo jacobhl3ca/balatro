@@ -1,8 +1,9 @@
-import pyautogui # https://pyautogui.readthedocs.io/en/latest/quickstart.html
+import pyautogui  # Library for GUI automation (https://pyautogui.readthedocs.io/en/latest/quickstart.html)
+# Enable fail-safe to stop the script by moving the mouse to the upper-left corner
 pyautogui.FAILSAFE = True
 import time
-import logging
 import os
+# import logging
     
 # Function to perform the automation
 def automate_clicks():
@@ -11,13 +12,18 @@ def automate_clicks():
     os.system("osascript -e 'tell application \"System Events\" to key code 48 using {command down}'")
     time.sleep(0.5)  # Small delay to ensure the app switch completes
 
+# URL has to be open in browser
+# https://mail.google.com/mail/u/0/#search/from%3Ajacobhl3CA%40gmail.com+OR+jacob.heifetz-licht%40keplergrp.com+to%3Ame+in%3Ainbox 
+
     # Press the escape key
     pyautogui.press('escape')
     
     # Coordinates to click
     positions = [
-        # (477, 689), #from main menu
-        (746, 340), # if already on challenege screen
+        # from main menu
+        # (477, 689) #comment/uncomment
+        # if already on challenge screen
+        (746, 340),  #comment/uncomment
         (805, 202),
         (706, 415),
         (512, 585),
